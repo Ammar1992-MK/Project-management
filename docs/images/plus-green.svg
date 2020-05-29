@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.415" height="25.415" viewBox="0 0 25.415 25.415">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6abea7;
+        stroke: rgba(106,190,167,0.9);
+      }
+    </style>
+  </defs>
+  <path id="Cancel" class="cls-1" d="M8.278,9.783,1.5,16.557,0,15.051,6.773,8.278,0,1.5,1.5,0,8.278,6.773,15.051,0l1.506,1.5L9.783,8.278l6.773,6.773-1.506,1.506Z" transform="translate(12.707 1) rotate(45)"/>
+</svg>

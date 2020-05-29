@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.222" height="22.222" viewBox="0 0 32.222 22.222">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #454546;
+      }
+    </style>
+  </defs>
+  <path id="Checkbox" class="cls-1" d="M12.778,22.222,0,9.444,2.593,6.852l10.185,10L29.629,0l2.593,2.593Z"/>
+</svg>

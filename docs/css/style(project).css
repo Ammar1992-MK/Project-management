@@ -1,0 +1,692 @@
+@import url(//db.onlinewebfonts.com/c/d02befc8fdd8e5315fb21fa7f38fd55a?family=Shree+Devanagari+714);
+@font-face {font-family: "Shree Devanagari 714"; 
+src: url("//db.onlinewebfonts.com/t/d02befc8fdd8e5315fb21fa7f38fd55a.woff") format("woff"); }
+
+/* Fonts */
+
+.dark-font {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #454546;
+    font-weight: normal;
+    padding: 1% 1% 0.25% 1%;
+} 
+
+.green-font {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #6ABEA7;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: #323232;
+    opacity: 1;
+}
+
+h2 {
+    font-size: 24px;
+} 
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color: #454546;
+}
+
+.input-text {
+    font-size: 16px;
+}
+
+.instruction-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #707070;
+    font-size: 18px;
+}
+
+.default-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ACACAC;
+}
+
+/* Buttons */
+
+.green-btn-without-animation {
+    margin-right: 2%;
+    width: 44px;
+    height: 35px;
+    background-color: #6ABEA7;
+    box-shadow: 4px 4px 4px #00000029;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.green-btn-without-animation:hover {
+    background-color: #96D2B1;
+}
+
+.green-btn {
+    background-color: #6ABEA7;
+    box-shadow: 4px 4px 4px #00000029;
+    border-radius: 24px;
+    border: none;
+    transition: background-color 300ms ease-in;
+    -webkit-transition: background-color 300ms ease-in;
+    -moz-transition: background-color 300ms ease-in;
+    -ms-transition: background-color 300ms ease-in;
+    -o-transition: background-color 300ms ease-in;
+    cursor: pointer;
+}
+
+.green-btn:hover {
+    background-color: #96D2B1;
+}
+
+.big-btn {
+    width: 80px;
+    height: 45px;
+}
+
+.big-white-btn {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 2px 2px 6px #00000029;
+    border: 2px solid #E5E6E88E;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.add-task-btn {
+    border: none;
+    background: none;
+    text-align: end;
+    cursor: pointer;
+}
+
+.exit-btn {
+    border: none;
+    background: none;
+    align-self: flex-end;
+    width: 20px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.delete-btn img {
+    width: 11px;
+}
+
+.plus-btn {
+    margin-right: 2%;
+    width: 44px;
+    height: 35px;
+}
+
+.plus-btn img {
+    transition: ease-in-out 300ms;
+    -webkit-transition: ease-in-out 300ms;
+    -moz-transition: ease-in-out 300ms;
+    -ms-transition: ease-in-out 300ms;
+    -o-transition: ease-in-out 300ms;
+}
+
+.plus-btn:hover img {
+    transform: rotate(90deg)
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #FFFFFFE6;
+    border-radius: 24px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #F6F8FB;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #DBDBDB;
+  }
+
+/* Main CSS */
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #F6F8FB;
+}
+
+#project-page-grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0,0.25fr) minmax(200px,1fr) minmax(600px,4fr) minmax(0,0.25fr);
+    grid-template-rows: minmax(20px,0.8fr) minmax(300px,8fr) minmax(0,1.2fr);
+    grid-gap: 10px;
+}
+
+#project-page-left-side {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background: #F6F8FB 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+#project-page-menu {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background: #FFFFFFE6;
+    box-shadow: 2px 2px 6px #00000029;
+    border-radius: 0px 0px 24px 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
+}
+
+ #project-page-menu img {
+    width: auto;
+    height: 80%;
+    margin: 5%;
+    cursor: pointer;
+} 
+
+#project-list-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 80%;
+}
+
+.project-list-el {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    background: #FFFFFF1F 0% 0% no-repeat padding-box;
+    border: 1px solid #E5E6E8;
+    cursor: pointer;
+    border-radius: 0px 24x 24px 0px;
+
+}
+
+.color-div {
+    display: inline-block;
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+    margin: 3%;
+    border-radius: 6px; 
+}
+
+
+#project-page-header {
+    padding: 10px;
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    background: #96D2B1 0% 0% no-repeat padding-box;
+    box-shadow: -2px 2px 6px #00000029;
+    border-radius: 0px 0px 0px 24px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#logo-div {
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 19%;
+    position: sticky;
+}
+
+#project-page-flexbox-main {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#project-page-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    min-height: 10%;
+    background: #FFFFFFF2 0% 0% no-repeat padding-box;
+    box-shadow: 1px -1px 6px #00000029;
+    border: 2px solid #F1F3F6;
+    border-radius: 24px 24px 0px 0px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.add-task-div {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 141px;
+    height: 90%;
+}
+
+.add-task-div .add-task-img {
+    justify-content: center;
+    align-items: center;
+}
+
+#project-page-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 90%;
+    background: #FFFFFFE6 0% 0% no-repeat padding-box;
+    box-shadow: 1px 1px 6px #00000029;
+    border: 2px solid #F1F3F6;
+    border-radius: 0px 0px 24px 24px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: auto;
+}
+
+.column-div {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    background: #FFFFFFF2 0% 0% no-repeat padding-box;
+    box-shadow: 2px -2px 6px #00000029;
+    border: 1px solid #F1F3F6;
+    border-radius: 0px 0px 24px 24px;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: auto;
+}
+
+.column-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-div {
+    display: grid;
+    grid-template-columns: repeat(1fr, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
+    margin: 10px;
+    padding: 10px;
+    width: 228px;
+    height: 143px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 7px 7px 10px #00000029;
+    border: 3px solid #F1F3F680;
+    border-radius: 24px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.task-title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.task-due-date {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.task-members {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.member-img-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.member-img {
+    display: flex;
+    justify-content: center;
+    width: 36px;
+    height: 34px;
+    background: #707070D1 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+.text-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height : 12%;
+    width : 100%;
+}
+
+#project-page-flexbox-main > project-page-main {
+    flex: 1;
+}
+
+#project-page-footer {
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+    background: #F6F8FB 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+#project-page-right-side {
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+    background: #F6F8FB 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+/* CSS for create task pop up starts here */
+.popup-add-task {
+    display: none;
+}
+
+.task-title-input-field {
+    margin-bottom: 15px;
+}
+
+.task-description-input-field {
+    margin-left: 10px;
+    margin-bottom: 15px;
+    width: 468px;
+    height: 170px;
+    overflow: auto;
+}
+
+.attachment-div {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.create-task-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.add-border {
+    border: 6px solid #8DFFCD;
+} 
+
+
+/* CSS for view/edit task pop up starts here */
+.popup-view-task {
+    display: none;
+}
+
+.update-task-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+ 
+
+/* CSS common for both task pop ups starts here */
+.popup-task-common-style {
+    /* display: none; */
+    width: 100vw;
+    height: 100vh;
+    position : absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    background: rgba(150, 210, 177, 0.20);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.task-container-common-style {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width : 854px;
+    height: 627;
+    border-radius: 24px;
+    position: fixed;
+    top: 60px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 30px 30px 80px #00000029;
+}
+
+.task-container-header-common-style {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width : 854px;
+    background: #FFFFFF;
+    border-radius: 24px 24px 0px 0px;
+    text-align: center;
+}
+
+.task-container-header-common-style .exit-btn {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+}
+
+.task-container-content-common-style {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 2px 2px 6px #00000029;
+    border-radius: 0px 0px 24px 24px;
+    opacity: 1;
+}
+
+.left-side-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 6px #00000029;
+    border-radius: 0px 0px 24px 24px;
+    opacity: 1;
+    overflow: auto;
+}
+
+.priority-div {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.left-side-due-date-div {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.due-date-input-field {
+    position: relative;
+    width: 124px;
+    height: 37px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.left-side-attachments-div {
+    position: relative;
+    margin-bottom: 20px;
+    flex: 3;
+    overflow: auto;
+}
+
+.left-side-color-card-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.color-card-content {
+    position: relative;
+    width: 135px;
+    height: 228px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 3px solid #F1F3F6;
+    border-radius: 24px;
+    opacity: 1;
+}
+
+.color-card {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 45px;
+    height: 45px;
+    margin: 3%;
+    border-radius: 13px;   
+    border: 0px solid #8DFFCD;
+    cursor: pointer;
+}
+
+#color1{
+    background-color: #FFA69E;
+}
+
+#color2{
+    background-color: #6ABEA7;
+}
+
+#color3{
+    background-color: #96D2B1;
+}
+
+#color4{
+    background-color: #7EBCE6;
+}
+
+#color5{
+    background-color: #FF8E72;
+}
+
+#color6{
+    background-color: #F6FEAA;
+}
+
+#color7{
+    background-color: #E0B0D5;
+}
+
+#color8{
+    background-color: #ADDEE1;
+}
+
+.task-main-common-style {
+    position: relative;
+    display: flex;
+    flex: 4;
+    padding: 20px;
+    background: #FFFFFFEB;
+    box-shadow: 30px 30px 80px #00000029;
+    border-radius: 0px 0px 24px 24px;
+    opacity: 1;
+    overflow: auto;
+}
+
+.members-div-common-style {
+    display: flex;
+    align-items: flex-end;
+}
+
+.task-members-common-style {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 500px;
+    height: 112px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 3px solid #F1F3F6;
+    border-radius: 24px;
+    opacity: 1;
+    overflow: auto;
+}
+
+.add-member-btn-div-common-style {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+input, .input{
+    -webkit-appearance: textfield;
+    background-color: #FFFFFF;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 10px;
+    width: 80%;
+    border-width: 3px;
+    border-style: solid; 
+    border-color: #F1F3F6;
+    border-image: initial;
+    border-radius: 24px;
+    margin: 1%;
+}

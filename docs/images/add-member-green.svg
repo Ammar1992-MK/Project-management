@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.251" height="21.893" viewBox="0 0 33.251 21.893">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #6abea7;
+      }
+
+      .cls-1 {
+        stroke: #6abea7;
+      }
+    </style>
+  </defs>
+  <g id="Group_121" data-name="Group 121" transform="translate(-188.724 -101.721)">
+    <path id="Union_7" data-name="Union 7" class="cls-1" d="M3.977,4.708.689,8,0,7.306,3.288,4.018.185.915.915.185l3.1,3.1L7.306,0,8,.689,4.708,3.977l3.1,3.1-.731.731Z" transform="translate(195.378 107.499) rotate(45)"/>
+    <path id="Profile" class="cls-2" d="M0,21.893V19.156c0-3.011,4.926-5.474,10.946-5.474s10.946,2.463,10.946,5.474v2.736ZM5.473,5.474a5.473,5.473,0,1,1,5.474,5.473A5.474,5.474,0,0,1,5.473,5.474Z" transform="translate(200.083 101.721)"/>
+  </g>
+</svg>

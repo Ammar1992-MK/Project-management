@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Assign</title>    
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel = "shortcut icon" href = "favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" 
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+   
+    
+</head>
+<body>
+
+<div id = "grid-container">
+
+    <div id = "left-side"></div>
+
+    <header>
+        <img src = "images/logo.png" alt = "Logo">
+    </header>
+
+    <div id = "flexbox">
+            <nav class="nav-style">
+                <h2 class="txt dark-font">Your Work Boards</h2>
+                <button class=" add-project-btn  plus-btn green-btn ">
+                    <img src="images/plus-black.svg">
+                </button>
+            </nav>
+
+            <main class="submitted-projects"></main>
+    </div>
+
+    <footer></footer>
+
+    <div id = "right-side"></div> 
+
+</div> 
+
+
+
+
+<!--Pop up form for project information-->
+<div class="popup-project-info">
+    <div class="project-info-content">
+        <div class="project-info-header nav-style">
+            <h1 class="dark-font">Create Work Board</h1>
+         <button class="exit-btn" ><img src="images/exit-black.svg"></button> 
+        </div>
+
+        <div class="project-form">
+        <form>
+            <label>
+                <h3 class = "green-font">Project Name</h3>
+                <input class="name-input input-text" type="text" placeholder="Project Name">
+            </label>
+            
+            <label>
+                <h3 class = "green-font">Status Categories</h3>
+                <input class="category-input input-text" type="text" placeholder="E.g.to do,testing,done etc...">
+                <button class="add-category-btn plus-btn green-btn">
+                    <img src="images/plus-black.svg">
+                </button>
+            </label>
+
+            <h5 class = "green-font">Categories</h5> 
+            
+            <div class="categories-div">
+                <!-- Here comes category-div -->
+                <!-- <button class="delete-category-btn delete-btn">
+                    <img src="images/exit-black.svg">
+               </button> -->
+            </div>
+            <h3 class = "green-font">Project Color</h3>
+            <div class="project-color-div">
+
+                <div class="color-div" id="color1"></div>
+                <div class="color-div" id="color2"></div>
+                <div class="color-div" id="color3"></div>
+                <div class="color-div" id="color4"></div>
+                <div class="color-div" id="color5"></div>
+                <div class="color-div" id="color6"></div>
+                <div class="color-div" id="color7"></div>
+                <div class="color-div" id="color8"></div>
+
+            </div>
+            <div id = "submit-project-btn-div">
+                <div class="submit-project-btn green-btn big-btn">
+                    <img src="images/Path 10.svg">
+                </div>
+            </div>
+            
+        </form>
+      </div>
+    </div>
+</div> 
+
+    <!--POP UP from for adding members to the project-->
+<div id="popup-add-members-info">
+    <div id="add-members-container-content">
+        <div id="add-members-container-header">
+            <h1 class="dark-font">
+                Pick Your Team
+            </h1>
+            <button class="close-member-form" ><img class="exit-btn" src="images/exit-black.svg"></button>
+        </div>
+
+        <div id="the-team-div">
+            <h3 class = "green-font">
+                <img src="images/Profile-green.svg" alt="Team member icon">
+                The Team
+            </h3>
+        </div> 
+
+        <div id="added-member-list">
+                <!-- Members will be listed here as picked-->
+        </div>
+
+         <!-- Add member dropdown -->
+         <div class="dropdown">
+            <button onclick="dropDownFunction()" class="dropbtn">Select Member<img src="images/greenArrow.svg"></button>
+            <div id="dropdown-list" class="dropdown-content">
+              <div>member</div>
+            </div>
+          </div>
+         
+        <div id="create-new-member-div">
+            <h3 class = "green-font">
+                Missing someone from your dream team?
+            </h3>
+
+            <div id="create-new-member-form">
+                <p class="input-text dark-font info-p default-text">
+                    Create new members of Assign and add them to your project by filling out this form!</p>
+
+                <form onsubmit="createNewMember(event)">
+                <div class="create-new-member-form-div">
+                    <h5 class = "green-font member-name-h">Name</h5>
+                    <input class="input-text default-font member-input-field" name="name" placeholder="Member Name" />
+                </div>
+
+                <div class="create-new-member-form-div"><h5 class = "green-font">Profile Image</h5>
+                    <label for="file-upload" class="image-lable">
+                        Choose picture
+                    </label>
+                    <input id="file-upload" class="input-text default-text" name="image" type="file" onchange="handleFileSelect(event)" />
+                    <button id="add-member-btn" class="green-btn-without-animation" type="submit">
+                        <img src="images/add-member-black.svg">
+                    </button>
+                    <!-- <input id="add-member-btn" type="submit" /> -->
+                </div>
+                </form>
+            </div>
+        </div>
+    
+        <div id = "bottom-btn-div">
+            <h3 class="green-font">Ready to go?&nbsp;</h3>
+            <button id ="bottom-btn" class="green-btn big-btn">
+                <img src="images/Checkmark.svg">
+            </button>
+        </div>
+    </div>
+</div>
+    
+     <script src = "js/index.js"></script>
+     <script src = "js/app.js"></script>
+     
+    
+</body>
+
+<script>
+
+    
+    renderProjectWorkBoard();
+    renderMemberList();
+
+    window.addEventListener("storage",function(e){
+
+            renderMemberList();
+            renderProjectWorkBoard();
+            
+        
+    })  
+</script>
+
+</html>
